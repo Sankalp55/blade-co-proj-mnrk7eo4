@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Blade & Co. palette (HSL derived from blueprint hex) */
+  --background: 30 16% 4%; /* #0B0A08 */
+  --foreground: 43 42% 93%; /* #F5F1E6 */
+
+  --primary: 43 60% 61%; /* #D6B25E */
+  --primary-foreground: 30 16% 4%; /* #0B0A08 */
+
+  --secondary: 40 12% 10%; /* #1C1A16 */
+  --secondary-foreground: 43 42% 93%; /* #F5F1E6 */
+
+  --accent: 7 61% 44%; /* #B33A2B */
+
+  --muted: 40 14% 7%; /* #151310 */
+  --muted-foreground: 41 17% 75%; /* #C9C2B3 */
+
+  --card: 30 16% 6%; /* #12100D */
+
+  --border: 38 15% 14%; /* #2A261F */
+  --ring: 43 60% 61%; /* #D6B25E */
+}
+
+.dark {
+  --background: 30 16% 4%;
+  --foreground: 43 42% 93%;
+
+  --primary: 43 60% 61%;
+  --primary-foreground: 30 16% 4%;
+
+  --secondary: 40 12% 10%;
+  --secondary-foreground: 43 42% 93%;
+
+  --accent: 7 61% 44%;
+
+  --muted: 40 14% 7%;
+  --muted-foreground: 41 17% 75%;
+
+  --card: 30 16% 6%;
+
+  --border: 38 15% 14%;
+  --ring: 43 60% 61%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+    text-rendering: geometricPrecision;
+  }
+}
